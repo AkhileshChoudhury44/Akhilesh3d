@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Curved Images</title>
+    <meta name="description" content="Curved Images - A-Frame">
+    <script src="afra.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="mozvr" src="2.jpg">
+        <img id="shadow2" src="3.jpg">
+        <img id="ui1" src="4.jpg">
+        <img id="ui2" src="5.jpg">
+        <img id="ui3" src="8.jpg">
+        <img id="ui4" src="13.jpg">
+        <img id="main" src="6.jpg">
+      </a-assets>
+
+      <a-curvedimage src="#main" radius="5.7" theta-length="360" height="9"
+                     rotation="0 360 0" scale="1.2 1.2 1.2"></a-curvedimage>
+       <a-curvedimage src="#ui3" radius="5.7" theta-length="30" height="3"
+                     rotation="0 -80 0" position="0 0.8 -1.5 " scale="0.6 0.6 0.6"></a-curvedimage>
+      <a-curvedimage src="#ui4" radius="5.7" theta-length="30" height="3"
+                     rotation="0 -80 0" position="0 1.8 0" scale="0.6 0.6 0.6"></a-curvedimage>              
+      <a-curvedimage src="#ui1" radius="5.7" theta-length="30" height="3"
+                     rotation="0 80 0" position="0 0.8 1" scale="0.6 0.6 0.6"></a-curvedimage>
+      <a-curvedimage src="#ui2" radius="5.7" theta-length="30" height="3"
+                     rotation="0 80 0" position="0 1.8 3" scale="0.6 0.6 0.6"></a-curvedimage>
+      <a-image position="0 5 0" src="#mozvr" rotation="90 0 0" scale="6 6 6"></a-image>
+      <a-image position="0 -5 0" src="#shadow2" rotation="-90 0 0" scale="6 6 6"></a-image>
+      <a-sky color="#FFFFCC"></a-sky>
+      <a-entity position="0 0 1.5">
+        <a-camera></a-camera>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
